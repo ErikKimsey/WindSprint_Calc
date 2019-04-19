@@ -1,0 +1,15 @@
+@import '../_global_styles/colors.scss';
+@import '../_global_styles/responsive.scss';
+// $orange: #F8800F;
+// $liteGray: #ACAAAD;
+// $numberGray: #393B38;
+// $displayGray: #111113;
+// $white: #ffffff;
+
+.display-container {
+  background-color: $displayGray;
+  color:$white;
+  width: 90%;
+  height: 222px;
+  border: solid 1px $white;
+}
