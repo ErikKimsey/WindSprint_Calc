@@ -16,18 +16,30 @@
 
 .number {
   background-color: $numberGray;
-}
-
-.operator {
-  background-color: $orange;
-}
-
-.misc {
-  color: $displayGray;
-  background-color: $liteGray;
-}
-
-.zero {
-  background-color: $numberGray;
-  width: 200px;
-}
+    &:active {
+      background-color: darken( $numberGray, 10% );
+    }
+  }
+  
+  .operator {
+    background-color: $orange;
+      &:active {
+        background-color: darken( $orange, 10% );
+      }
+    }
+    
+  .misc {
+    color: $displayGray;
+    background-color: $liteGray;
+    &:active {
+      background-color: darken( $liteGray, 10% );
+    }
+  }
+      
+  .zero {
+    background-color: $numberGray;
+    width: 200px;
+        &:active {
+          background-color: darken( $numberGray , 10% );
+        }
+  }

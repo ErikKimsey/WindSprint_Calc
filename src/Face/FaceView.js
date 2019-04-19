@@ -10,7 +10,7 @@ export default class FaceView extends Component {
     return (
       <div className="face-view-container">
         <DisplayView value={this.props.value}/>
-        <ButtonContainer data={this.props.data}/>
+        <ButtonContainer data={this.props.data} setValue={this.props.setValue}/>
       </div>
     )
   }
