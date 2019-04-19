@@ -19,6 +19,10 @@ export default class Button extends Component {
     this.btnRef.current.classList.add(this.props.type);
   }
 
+  addFunction = () => {
+    
+  }
+
   render() {
     return (
       <div className="button-container" ref={this.btnRef}>

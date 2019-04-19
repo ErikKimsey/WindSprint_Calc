@@ -1,7 +1,7 @@
 
 
-export const add = () => {
-
+export const add = (...nums) => {
+  console.log(nums);
 }
 
 export const subtract = () => {}

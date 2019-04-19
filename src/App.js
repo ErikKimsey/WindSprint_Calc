@@ -5,6 +5,7 @@ import { buttonData } from './data/ButtonData';
 
 class App extends Component {
   state = {
+    temp: 0,
     calculation: 0,
   }
 
