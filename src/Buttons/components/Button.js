@@ -8,6 +8,7 @@ export default class Button extends Component {
   }
 
   componentDidMount(){
+    // console.log(this.props);
     this.setState ({ 
       type: this.props.type,
       display: this.props.display
@@ -16,16 +17,17 @@ export default class Button extends Component {
   }
 
   addClass = () => {
-    let type = this.props.data.type;
+    let type = this.props.type;
     console.log(type);
+    
     let btn = document.querySelector('.button-container');
-    btn.classList.add(this.props.data.type);
+    btn.classList.add(this.props.type);
   }
 
   render() {
     return (
       <div className="button-container">
-        {this.props.data.display}
+        {this.props.display}
       </div>
     )
   }
