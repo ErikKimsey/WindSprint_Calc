@@ -2,31 +2,26 @@ import React, { Component } from 'react';
 import './button.scss';
 
 export default class Button extends Component {
-  state = {
-    type: null,
-    display: null,
+  constructor(props){
+    super(props);
+    this.state = {
+      type: null,
+      display: null,
+    }
+    this.btnRef = React.createRef();
   }
 
   componentDidMount(){
-    // console.log(this.props);
-    this.setState ({ 
-      type: this.props.type,
-      display: this.props.display
-    });
     this.addClass();
   }
-
+  
   addClass = () => {
-    let type = this.props.type;
-    console.log(type);
-    
-    let btn = document.querySelector('.button-container');
-    btn.classList.add(this.props.type);
+    this.btnRef.current.classList.add(this.props.type);
   }
 
   render() {
     return (
-      <div className="button-container">
+      <div className="button-container" ref={this.btnRef}>
         {this.props.display}
       </div>
     )
