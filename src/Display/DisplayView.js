@@ -6,7 +6,9 @@ export default class DisplayView extends Component {
   render(props) {
     return (
       <div className="display-container">
-        
+        <div className="display-content">
+          {this.props.value}
+        </div>
       </div>
     )
   }

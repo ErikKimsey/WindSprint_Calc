@@ -4,7 +4,9 @@ import DisplayView from '../Display/DisplayView';
 import ButtonContainer from '../Buttons/containers/ButtonContainer';
 
 export default class FaceView extends Component {
-  render() {
+  
+  render(props) {
+    console.log(this.props);
     return (
       <div className="face-view-container">
         <DisplayView value={this.props.value}/>

@@ -10,6 +10,13 @@
   background-color: $displayGray;
   color:$white;
   width: 90%;
-  height: 222px;
+  height: 122px;
   border: solid 1px $numberGray;
+  font-size: 6em;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-end;
+  .display-content {
+    padding: 10px;
+  }
 }
