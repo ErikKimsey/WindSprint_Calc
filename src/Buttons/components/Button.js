@@ -10,6 +10,12 @@ export default class Button extends Component {
   componentDidMount(){
     // this.setState ({ type: this.props.type});
   }
+
+  addClass = () => {
+    let btn = document.querySelector('button-container');
+    btn.classList.add()
+  }
+
   render() {
     return (
       <div className="button-container">

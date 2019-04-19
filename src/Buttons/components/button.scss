@@ -1,10 +1,5 @@
 @import '../../_global_styles/colors.scss';
 @import '../../_global_styles/responsive.scss';
-// $orange: #F8800F;
-// $liteGray: #ACAAAD;
-// $numberGray: #393B38;
-// $displayGray: #111113;
-// $white: #ffffff;
 
 .button-container {
   color:$white;
@@ -19,19 +14,20 @@
   align-items: center;
 }
 
-.number-button {
+.number {
   background-color: $numberGray;
 }
 
-.operator-button {
+.operator {
   background-color: $orange;
 }
 
-.misc-button {
+.misc {
   color: $displayGray;
   background-color: $liteGray;
 }
 
-.zero-button {
+.zero {
   background-color: $numberGray;
+  width: 200px;
 }

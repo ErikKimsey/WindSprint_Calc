@@ -82,7 +82,7 @@ export const buttonData = [
   {
     name: 'zero',
     display: '0',
-    type:'number'
+    type:'zero'
   },
   {
     name: 'period',
