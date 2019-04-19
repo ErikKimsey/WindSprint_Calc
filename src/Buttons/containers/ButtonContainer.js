@@ -5,12 +5,10 @@ import Button from '../components/Button';
 export default class ButtonContainer extends Component {
   
   render() {
-    // console.log(this.props.data);
     return (
       <div className="button-view-container">
         {
           this.props.data.map((e,i) => {
-            {/* console.log(e.type); */}
             return <Button key={e.display} type={e.type} display={e.display} />
           })
         }

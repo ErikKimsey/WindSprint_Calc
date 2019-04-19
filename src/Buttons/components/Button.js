@@ -15,12 +15,14 @@ export default class Button extends Component {
     this.addClass();
   }
   
+  // adds additional class to button-container, from button type prop
   addClass = () => {
     this.btnRef.current.classList.add(this.props.type);
   }
 
-  addFunction = () => {
-    
+  // applies type of funcation or calculation to button
+  applyFunction = () => {
+
   }
 
   render() {
