@@ -36,3 +36,4 @@ export const equals = () => {}
 // console.log(subtract(5,5,5,5,5,5,5,5,5))
 // console.log(divide(20,5,2))
 // console.log(multiply(3,4,2,2))
+ 

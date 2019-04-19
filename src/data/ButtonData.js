@@ -16,7 +16,7 @@ export const buttonData = [
   },
   {
     name: 'divide',
-    display: '&#247;',
+    display: String.fromCharCode(247),
     type:'operator'
   },
   {
@@ -36,7 +36,7 @@ export const buttonData = [
   },
   {
     name: 'multiply',
-    display: '&#215;',
+    display: String.fromCharCode(215),
     type:'operator'
   },
   {

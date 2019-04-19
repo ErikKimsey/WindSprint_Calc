@@ -16,7 +16,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FaceView setValue={this.setCalculationValue} value={this.state.calculation} data={buttonData}/>
+        <FaceView setValue={this.setCalculationValue} value={this.state.calculation} data={buttonData} />
       </div>
     );
   }
