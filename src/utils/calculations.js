@@ -32,7 +32,7 @@ export const multiply = (...nums) => {
 
 export const equals = () => {}
 
-console.log(add(3,4,7));
-console.log(subtract(5,5,5,5,5,5,5,5,5))
-console.log(divide(20,5,2))
-console.log(multiply(3,4,2,2))
+// console.log(add(3,4,7));
+// console.log(subtract(5,5,5,5,5,5,5,5,5))
+// console.log(divide(20,5,2))
+// console.log(multiply(3,4,2,2))
