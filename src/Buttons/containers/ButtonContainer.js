@@ -3,14 +3,16 @@ import './buttoncontainer.scss';
 import Button from '../components/Button';
 
 export default class ButtonContainer extends Component {
+  
   render() {
+    console.log(this.props);
     return (
       <div className="button-view-container">
-        <Button />
-        <Button />
-        <Button />
-        <Button />
-        <Button />
+        {
+          this.props.data.map((e,i)=>{
+            return <Button key={e.display} data={e}/>
+          })
+        }
       </div>
     )
   }

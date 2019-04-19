@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import FaceView from './Face/FaceView';
 import './App.scss';
+import { buttonData } from './data/ButtonData';
 
 class App extends Component {
   state = {
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <FaceView setValue={this.setCalculationValue} value={this.state.calculation}/>
+        <FaceView setValue={this.setCalculationValue} value={this.state.calculation} data={buttonData}/>
       </div>
     );
   }
