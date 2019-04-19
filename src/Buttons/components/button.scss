@@ -1,5 +1,5 @@
-@import '../_global_styles/colors.scss';
-@import '../_global_styles/responsive.scss';
+@import '../../_global_styles/colors.scss';
+@import '../../_global_styles/responsive.scss';
 // $orange: #F8800F;
 // $liteGray: #ACAAAD;
 // $numberGray: #393B38;
@@ -8,6 +8,15 @@
 
 .button-container {
   color:$white;
+  font-size: 2em;
+  width: 100px;
+  height: 100px;
+  border: 0px;
+  border-radius: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .number-button {
@@ -15,10 +24,11 @@
 }
 
 .operator-button {
-  background-color: $F8800F;
+  background-color: $orange;
 }
 
 .misc-button {
+  color: $displayGray;
   background-color: $liteGray;
 }
 
