@@ -1,5 +1,13 @@
 @import '../_global_styles/colors.scss';
+@import '../_global_styles/responsive.scss';
 
 .face-view-container {
-  
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  padding: 20px 0;
+  display: flex;
+  flex-flow: column;
+  background-color: $displayGray;
 }

@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './faceview.scss';
 
 export default class FaceView extends Component {
   render() {
