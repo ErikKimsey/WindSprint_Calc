@@ -29,3 +29,18 @@
  *        
  * }
  */
+
+const OPS = ['*', '/', '+', '-'];
+
+ export const findCalculation = (arr,op) => {
+    for (let i = 0; i < arr.length; i++) {
+      let elem = arr[i];
+      let temp = [];
+      if(elem != op && typeof elem === 'number'){
+        temp.push(elem);
+      }
+      if(elem === op){
+        
+      }
+    }
+ }
