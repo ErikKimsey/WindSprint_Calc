@@ -34,7 +34,29 @@ import * as calcs from './calculations';
 
 
 let i = 0;
-const OPS = ['*', '/', '+', '-'];
+// const OPS = ['*', '/', '+', '-'];
+const OPS = {
+  multiply : {
+    fxn: calcs.multiply,
+    operator: '*'
+  },
+  divide : {
+    fxn: calcs.divide,
+    operator: '/'
+  },
+  add : {
+    fxn: calcs.add,
+    operator: '+'
+  },
+  subtract : {
+    fxn: calcs.subtract,
+    operator: '-'
+  },
+  equauls : {
+    fxn: calcs.equals,
+    operator: '='
+  }
+}
 
  export const findCalculation = (arr,op) => {
     for (let i = 0; i < arr.length; i++) {
