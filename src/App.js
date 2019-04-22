@@ -22,6 +22,11 @@ class App extends Component {
   getInput = (input) => {
     console.log(OPS.includes(input));
     if(OPS.includes(input) === true){
+        if (input === '='){
+          // console.log(input);
+          console.warn('not yet');
+          return;
+        }
         this.incrCalcArr(input);
     } else {
       this.setCalculation(input);
@@ -55,7 +60,7 @@ class App extends Component {
   }
   
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div className="App">
         <FaceView getInput={this.getInput} value={this.state.calculation} data={buttonData} />

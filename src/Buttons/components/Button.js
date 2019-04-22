@@ -13,8 +13,6 @@ export default class Button extends Component {
 
   componentDidMount(){
     this.addClass();
-    console.log(this.props);
-    
   }
   
   /**
