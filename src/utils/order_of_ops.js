@@ -30,33 +30,80 @@
  * }
  */
 
-import * as calcs from './calculations';
+
+// import * as from './calculations';
+// const OPS = [
+//   {
+//     fxn: multiply,
+//     operator: '*'
+//   },
+//   {
+//     fxn: divide,
+//     operator: '/'
+//   },
+//   {
+//     fxn: add,
+//     operator: '+'
+//   },
+//   {
+//     fxn: subtract,
+//     operator: '-'
+//   }
+// ]
+export const add = (...nums) => {
+  return nums.reduce((acc, curr)=>{
+    return acc + curr;
+  })
+}
+
+export const subtract = (...nums) => {
+  return nums.reduce((acc, curr)=>{
+    return acc - curr;
+  });
+}
+
+export const divide = (...nums) => {
+  return nums.reduce((acc, curr)=>{
+    return acc / curr;
+  })
+}
+
+export const multiply = (...nums) => {
+  return nums.reduce((acc, curr)=>{
+    return acc * curr;
+  })
+}
 
 const OPS = [
   {
-    fxn: calcs.multiply,
+    fxn: multiply,
     operator: '*'
   },
   {
-    fxn: calcs.divide,
+    fxn: divide,
     operator: '/'
   },
   {
-    fxn: calcs.add,
+    fxn: add,
     operator: '+'
   },
   {
-    fxn: calcs.subtract,
+    fxn: subtract,
     operator: '-'
   }
 ]
 
  export const findCalculation = (arr,OPS) => {
+   
     if(arr.length <= 0) return; 
-    let tempArr = arr.splice();  
+    let tempArr;
+    tempArr = arr.slice();  
+    console.log(tempArr);
+    
     for (let i = 0; i < OPS.length; i++) {
-      let nuArr = createAnswerArray(tempArr, OPS[i]);
-      tempArr = nuArr.splice();
+      // let nuArr = createAnswerArray(tempArr, OPS[i]);
+      createAnswerArray(tempArr, OPS[0]);
+      // tempArr = nuArr.slice();
     }
     let answer = tempArr[0];
     return answer;
@@ -72,27 +119,34 @@ const OPS = [
  */
 
  const createAnswerArray = (tempArr, op) => {
-  return findOperations(tempArr, op);
- }
-
- const findOperations = (arr, op) => {
-
-    while (arr.indexOf(op) != -1){
-      makeCalcArr(arr.indexOf(op), arr, op);
-    }
+   return findOperations(tempArr, op);
+  }
+  
+  const findOperations = (arr, op) => {
+    
+    console.log(op.operator);
+    // while (arr.indexOf(op.operator) != -1){
+      makeCalculation(arr.indexOf(op.operator), arr, op);
+    // }
     
  }
 
-const makeCalcArr = (i, arr) => {
-
+const makeCalculation = (i, arr, op) => {
+  let temp = [];
+  let answer = op.fxn(arr[i-1], arr[i+1]) 
+  console.log(answer);
+  carveOutNewArr(i,arr,answer);
 }
 
-const carveOutNewArr = (arr) => {
-  let 
-  let nuArr = arr.splice();
-  nuArr.slice()
- }
+const carveOutNewArr = (i, arr,answer) => {
+  let nuArr = arr.splice(i-1,i+1);
+    console.log(nuArr);
+    
+  }
 
 const buildNewArr = (arr, newElem) => {
 
 }
+
+// SHOULD BE: '14'
+console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
