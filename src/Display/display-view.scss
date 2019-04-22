@@ -14,9 +14,11 @@
   border: solid 1px $numberGray;
   font-size: 6em;
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
   justify-content: flex-end;
   .display-content {
     padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
   }
 }

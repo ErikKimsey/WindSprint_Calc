@@ -20,10 +20,8 @@ class App extends Component {
 
 
   getInput = (input) => {
-    console.log(OPS.includes(input));
     if(OPS.includes(input) === true){
         if (input === '='){
-          // console.log(input);
           console.warn('not yet');
           return;
         }
