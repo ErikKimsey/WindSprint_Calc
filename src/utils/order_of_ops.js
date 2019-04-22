@@ -30,7 +30,6 @@
  * }
  */
 
-
 // import * as from './calculations';
 // const OPS = [
 //   {
@@ -50,6 +49,7 @@
 //     operator: '-'
 //   }
 // ]
+
 export const add = (...nums) => {
   return nums.reduce((acc, curr)=>{
     return acc + curr;
@@ -148,5 +148,6 @@ const buildNewArr = (arr, newElem) => {
 
 }
 
-// SHOULD BE: '14'
-console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
+// SHOULD BE: '7'
+// console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
+console.log(2*4-1*2);

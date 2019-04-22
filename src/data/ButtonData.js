@@ -1,8 +1,10 @@
+
+
 export const buttonData = [
   {
     name: 'clear',
     display: 'AC',
-    type: 'misc'
+    type: 'misc',
   },
   {
     name: 'negative',
@@ -21,17 +23,17 @@ export const buttonData = [
   },
   {
     name: '7',
-    display: '7',
+    display: 7,
     type:'number'
   },
   {
     name: '8',
-    display: '8',
+    display: 8,
     type:'number'
   },
   {
     name: '9',
-    display: '9',
+    display: 9,
     type:'number'
   },
   {
@@ -41,17 +43,17 @@ export const buttonData = [
   },
   {
     name: '4',
-    display: '4',
+    display: 4,
     type:'number'
   },
   {
     name: '5',
-    display: '5',
+    display: 5,
     type:'number'
   },
   {
     name: '6',
-    display: '6',
+    display: 6,
     type:'number'
   },
   {

@@ -13,6 +13,8 @@ export default class Button extends Component {
 
   componentDidMount(){
     this.addClass();
+    console.log(this.props);
+    
   }
   
   /**
@@ -22,14 +24,18 @@ export default class Button extends Component {
     this.btnRef.current.classList.add(this.props.type);
   }
 
+  handleGetInput = (num) => {
+    return this.props.getInput(num)
+  }
+
   /**
-   * applies type of funcation or calculation to button
+   * applies type of function or calculation to button
    */
   applyFunction = () => {}
 
   render() {
     return (
-      <div className="button-container" ref={this.btnRef}>
+      <div className="button-container" ref={this.btnRef} onClick={()=>{this.handleGetInput(this.props.display)}}>
         {this.props.display}
       </div>
     )

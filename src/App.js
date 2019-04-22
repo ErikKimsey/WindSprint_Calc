@@ -13,10 +13,15 @@ class App extends Component {
     this.setState({ calculation: val});
   }
 
+  getInput = (input) => {
+    console.log(input);
+    
+  }
+
   render() {
     return (
       <div className="App">
-        <FaceView setValue={this.setCalculationValue} value={this.state.calculation} data={buttonData} />
+        <FaceView setValue={this.setCalculationValue} getInput={this.getInput} value={this.state.calculation} data={buttonData} />
       </div>
     );
   }
