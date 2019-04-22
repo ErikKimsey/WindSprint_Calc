@@ -8,7 +8,7 @@ export default class DisplayView extends Component {
       <div className="display-container">
           {
             this.props.value.map((e)=>{
-              return <div key={e} className="display-content">{e}</div>
+              return <div key={Math.random(0,e)} className="display-content">{e}</div>
             })
           }
       </div>

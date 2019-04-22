@@ -1,10 +1,5 @@
 @import '../_global_styles/colors.scss';
 @import '../_global_styles/responsive.scss';
-// $orange: #F8800F;
-// $liteGray: #ACAAAD;
-// $numberGray: #393B38;
-// $displayGray: #111113;
-// $white: #ffffff;
 
 .display-container {
   background-color: $displayGray;
@@ -12,7 +7,7 @@
   width: 90%;
   height: 122px;
   border: solid 1px $numberGray;
-  font-size: 6em;
+  font-size: 3em;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -20,5 +15,6 @@
     padding: 10px;
     display: flex;
     flex-flow: row wrap;
+    overflow: inherit;
   }
 }

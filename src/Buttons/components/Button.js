@@ -33,7 +33,7 @@ export default class Button extends Component {
 
   render() {
     return (
-      <div className="button-container" ref={this.btnRef} onClick={()=>{this.handleGetInput(this.props.display)}}>
+      <div className="button-container" ref={this.btnRef} onClick={()=>{this.handleGetInput(this.props)}}>
         {this.props.display}
       </div>
     )

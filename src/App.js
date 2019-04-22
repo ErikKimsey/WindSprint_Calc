@@ -20,14 +20,16 @@ class App extends Component {
 
 
   getInput = (input) => {
-    if(OPS.includes(input) === true){
-        if (input === '='){
-          console.warn('not yet');
-          return;
-        }
-        this.incrCalcArr(input);
-    } else {
-      this.setCalculation(input);
+    // console.log(input);
+    if(input.type === 'number'){
+        this.setCalculation(input.display);
+    }
+    if(input.type === 'operator'){
+            if (input.display === '='){
+              console.warn('not yet');
+              return;
+            }
+            this.incrCalcArr(input.display);
     }
   }
   
