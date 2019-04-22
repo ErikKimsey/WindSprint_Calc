@@ -32,46 +32,34 @@
 
 import * as calcs from './calculations';
 
-
-let i = 0;
-// const OPS = ['*', '/', '+', '-'];
-const OPS = {
-  multiply : {
+const OPS = [
+  {
     fxn: calcs.multiply,
     operator: '*'
   },
-  divide : {
+  {
     fxn: calcs.divide,
     operator: '/'
   },
-  add : {
+  {
     fxn: calcs.add,
     operator: '+'
   },
-  subtract : {
+  {
     fxn: calcs.subtract,
     operator: '-'
-  },
-  equauls : {
-    fxn: calcs.equals,
-    operator: '='
   }
-}
+]
 
- export const findCalculation = (arr,op) => {
-    for (let i = 0; i < arr.length; i++) {
-      let elem = arr[i];
-      let temp = [];
-      let firstNumIndex = null;
-      if(i != 0 && elem === OPS[0]){
-        firstNumIndex = i-1;
-        temp.push(arr[i-1]);
-        temp.push(arr[i+1]);
-        firstNumIndex = arr[i-1];
-        let answer = calcs.multiply(temp);
-        carveOutNewArr(arr, firstNumIndex);
-      }
+ export const findCalculation = (arr,OPS) => {
+    if(arr.length <= 0) return; 
+    let tempArr = arr.splice();  
+    for (let i = 0; i < OPS.length; i++) {
+      let nuArr = createAnswerArray(tempArr, OPS[i]);
+      tempArr = nuArr.splice();
     }
+    let answer = tempArr[0];
+    return answer;
  }
 
 /**
@@ -83,22 +71,28 @@ const OPS = {
  * 6. when "null" returned from "current ordered operation function", move onto next ordered operation function
  */
 
- const findMultiplication = (arr) => {
-    if(arr.indexOf('*') === -1){
-      return null;
+ const createAnswerArray = (tempArr, op) => {
+  return findOperations(tempArr, op);
+ }
+
+ const findOperations = (arr, op) => {
+
+    while (arr.indexOf(op) != -1){
+      makeCalcArr(arr.indexOf(op), arr, op);
     }
-
+    
  }
 
- while (i < arr.length){
+const makeCalcArr = (i, arr) => {
 
- }
+}
 
- export const carveOutNewArr = (arr, opIndex) => {
+const carveOutNewArr = (arr) => {
+  let 
   let nuArr = arr.splice();
   nuArr.slice()
  }
 
- export const buildNewArr = (arr, newElem) => {
+const buildNewArr = (arr, newElem) => {
 
- }
+}
