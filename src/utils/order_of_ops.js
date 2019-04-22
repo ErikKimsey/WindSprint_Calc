@@ -1,8 +1,7 @@
 /**
  * 
- * 
+ * < NOTES >
  * number [operation] number [operation] number [operation] number
- * number [addition] number [multiply] number [subtract] number
  * 12 [addition] 2 [multiply] 4 [subtract] 2
  * while input...
  * 1. while (number) {
@@ -30,25 +29,9 @@
  * }
  */
 
+// the Quokka trial won't import
 // import * as from './calculations';
-// const OPS = [
-//   {
-//     fxn: multiply,
-//     operator: '*'
-//   },
-//   {
-//     fxn: divide,
-//     operator: '/'
-//   },
-//   {
-//     fxn: add,
-//     operator: '+'
-//   },
-//   {
-//     fxn: subtract,
-//     operator: '-'
-//   }
-// ]
+
 
 export const add = (...nums) => {
   return nums.reduce((acc, curr)=>{
@@ -110,6 +93,7 @@ const OPS = [
  }
 
 /**
+ * < NOTES >
  * 1. find index in OGarr,
  * 2. make subarr of nums
  * 3. send subarr to calc function,
@@ -138,15 +122,14 @@ const makeCalculation = (i, arr, op) => {
   carveOutNewArr(i,arr,answer);
 }
 
+// 
 const carveOutNewArr = (i, arr,answer) => {
   let nuArr = arr.splice(i-1,i+1);
     console.log(nuArr);
     
   }
 
-const buildNewArr = (arr, newElem) => {
-
-}
+const buildNewArr = (arr, newElem) => {}
 
 // SHOULD BE: '7'
 // console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
