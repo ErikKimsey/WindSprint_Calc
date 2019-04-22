@@ -30,17 +30,53 @@
  * }
  */
 
+import * as calcs from './calculations';
+
+
+let i = 0;
 const OPS = ['*', '/', '+', '-'];
 
  export const findCalculation = (arr,op) => {
     for (let i = 0; i < arr.length; i++) {
       let elem = arr[i];
       let temp = [];
-      if(elem != op && typeof elem === 'number'){
-        temp.push(elem);
-      }
-      if(elem === op){
-        
+      let firstNumIndex = null;
+      if(i != 0 && elem === OPS[0]){
+        firstNumIndex = i-1;
+        temp.push(arr[i-1]);
+        temp.push(arr[i+1]);
+        firstNumIndex = arr[i-1];
+        let answer = calcs.multiply(temp);
+        carveOutNewArr(arr, firstNumIndex);
       }
     }
+ }
+
+/**
+ * 1. find index in OGarr,
+ * 2. make subarr of nums
+ * 3. send subarr to calc function,
+ * 4. splice OGarr with product,
+ * 5. until "null", send new OGarr back to "step 1" and repeat "steps 1 -5" 
+ * 6. when "null" returned from "current ordered operation function", move onto next ordered operation function
+ */
+
+ const findMultiplication = (arr) => {
+    if(arr.indexOf('*') === -1){
+      return null;
+    }
+
+ }
+
+ while (i < arr.length){
+
+ }
+
+ export const carveOutNewArr = (arr, opIndex) => {
+  let nuArr = arr.splice();
+  nuArr.slice()
+ }
+
+ export const buildNewArr = (arr, newElem) => {
+
  }
