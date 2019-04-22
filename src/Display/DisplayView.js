@@ -4,11 +4,15 @@ import Button from '../Buttons/components/Button';
 
 export default class DisplayView extends Component {
   render(props) {
+    
     return (
       <div className="display-container">
-        <div className="display-content">
-          {this.props.value}
-        </div>
+
+          {/* {
+            this.props.value.map((e)=>{
+              return <div className="display-content">{e}</div>
+            })
+          } */}
       </div>
     )
   }
