@@ -76,20 +76,29 @@ const OPS = [
   }
 ]
 
- export const findCalculation = (arr,OPS) => {
+export const findCalculation = (arr,OPS) => {
+  let index = 0;
    
-    if(arr.length <= 0) return; 
+    if(arr.length < 1) return; 
     let tempArr;
     tempArr = arr.slice();  
-    console.log(tempArr);
     
-    for (let i = 0; i < OPS.length; i++) {
-      // let nuArr = createAnswerArray(tempArr, OPS[i]);
-      createAnswerArray(tempArr, OPS[0]);
-      // tempArr = nuArr.slice();
+    console.log(tempArr);
+    console.log(index);
+    while(tempArr.indexOf(OPS[index].operator) != -1 && index < OPS.length){
+      createAnswerArray(tempArr, OPS[index]);
+      console.log(createAnswerArray(tempArr, OPS[index]));
+      console.log(tempArr.indexOf(OPS[index].operator));
     }
+    index++;
+    console.log(OPS[index]);
+    
     let answer = tempArr[0];
-    return answer;
+    console.log(answer);
+ }
+
+ const iterateOPS = () => {
+
  }
 
 /**
@@ -107,30 +116,28 @@ const OPS = [
   }
   
   const findOperations = (arr, op) => {
-    
     console.log(op.operator);
-    // while (arr.indexOf(op.operator) != -1){
-      makeCalculation(arr.indexOf(op.operator), arr, op);
-    // }
-    
+    return makeCalculation(arr.indexOf(op.operator), arr, op);
  }
 
 const makeCalculation = (i, arr, op) => {
   let temp = [];
-  let answer = op.fxn(arr[i-1], arr[i+1]) 
+  console.log(op.fxn);
+  let answer = op.fxn(arr[i-1], arr[i+1]) ;
   console.log(answer);
-  carveOutNewArr(i,arr,answer);
+  return carveOutNewArr(i,arr,answer);
 }
 
 // 
 const carveOutNewArr = (i, arr,answer) => {
-  let nuArr = arr.splice(i-1,i+1);
-    console.log(nuArr);
-    
-  }
+  console.log(i);
+  return arr.splice(i-1,3, answer);
+}
 
-const buildNewArr = (arr, newElem) => {}
+const buildNewArr = (arr, newElem) => {
 
-// SHOULD BE: '7'
-// console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
-console.log(2*4-1*2);
+}
+
+// SHOULD BE: '6'
+console.log(findCalculation([2,'*',4, '-', 1, '*', 2], OPS));
+// console.log(2*4-1*2);

@@ -30,7 +30,9 @@ export const multiply = (...nums) => {
   })
 }
 
-export const equals = () => {}
+export const initCalculation = (arr) => {
+  
+}
 
 // console.log(add(3,4,7));
 // console.log(subtract(5,5,5,5,5,5,5,5,5))

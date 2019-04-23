@@ -40,11 +40,11 @@ class App extends Component {
         this.notAvailableYet(input);
         // this.incrCalcArr(input.display);
       }
-      if(input.type === 'percent'){
+      if(input.type === 'misc'){
         this.notAvailableYet(input);
         // this.incrCalcArr(input.display);
       }
-      if(input.type === 'negative'){
+      if(input.type === 'misc'){
         this.notAvailableYet(input);
         // this.incrCalcArr(input.display);
       }
