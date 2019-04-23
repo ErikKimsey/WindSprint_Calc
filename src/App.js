@@ -20,17 +20,19 @@ class App extends Component {
 
 
   getInput = (input) => {
-    // console.log(input);
     if(input.type === 'number'){
         this.setCalculation(input.display);
     }
-    if(input.type === 'operator'){
-            if (input.display === '='){
-              console.warn('not yet');
-              return;
-            }
-            this.incrCalcArr(input.display);
+    if (input.type === 'equals'){
+      console.warn('not yet');
+      return;
     }
+    if(input.type === 'operator'){
+      this.incrCalcArr(input.display);
+    }
+    if(input.type === 'AC'){}
+    if(input.type === 'percent'){}
+    if(input.type === 'negative'){}
   }
   
   setCalculation = (input) => {
