@@ -45,24 +45,19 @@ class App extends Component {
       this.setState({ calculation: calc});  
     } else {
       calc[this.state.calcIndex]+=input
-      console.log(calc);
       this.setState({ calculation: calc});  
     }
   }
 
   incrCalcArr = (input) => {
     let tempCalcArr = this.state.calculation.slice();
-    
     tempCalcArr.push(input);
-    console.log(tempCalcArr);
     let i = tempCalcArr.length;
-    console.log(i);
     this.setState({calcIndex: i});
     this.setState({calculation: tempCalcArr});
   }
   
   render() {
-    // console.log(this.state);
     return (
       <div className="App">
         <FaceView getInput={this.getInput} value={this.state.calculation} data={buttonData} />
