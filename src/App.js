@@ -25,14 +25,34 @@ class App extends Component {
     }
     if (input.type === 'equals'){
       console.warn('not yet');
+      /**
+       * call calculations()
+       * Calculations() will:
+       * parse the array, making calculation per order of operations.
+       */
       return;
     }
     if(input.type === 'operator'){
       this.incrCalcArr(input.display);
     }
-    if(input.type === 'AC'){}
-    if(input.type === 'percent'){}
-    if(input.type === 'negative'){}
+    if(input.type === 'misc'){
+      if(input.type === 'AC'){
+        this.notAvailableYet(input);
+        // this.incrCalcArr(input.display);
+      }
+      if(input.type === 'percent'){
+        this.notAvailableYet(input);
+        // this.incrCalcArr(input.display);
+      }
+      if(input.type === 'negative'){
+        this.notAvailableYet(input);
+        // this.incrCalcArr(input.display);
+      }
+    }
+  }
+  
+  notAvailableYet = (input) => {
+    console.warn(`${input.display} fxn not available yet`);
   }
   
   setCalculation = (input) => {

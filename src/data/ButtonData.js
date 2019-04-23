@@ -4,17 +4,17 @@ export const buttonData = [
   {
     name: 'clear',
     display: 'AC',
-    type: 'AC',
+    type: 'misc',
   },
   {
     name: 'negative',
     display: '+/-',
-    type: 'negative', 
+    type: 'misc', 
   },
   {
     name: 'percent',
     display: '%',
-    type: 'percent', 
+    type: 'misc', 
   },
   {
     name: 'divide',
@@ -94,6 +94,6 @@ export const buttonData = [
   {
     name: 'equals',
     display: '=',
-    type:'equals'
+    type:'operator'
   },
 ]
