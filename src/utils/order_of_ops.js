@@ -76,25 +76,28 @@ const OPS = [
   }
 ]
 
-export const findCalculation = (arr,OPS) => {
-  let index = 0;
+let index = 0;
+export const findCalculation = (arr,OPS, index=0) => {
+   console.log(arr);
    
-    if(arr.length < 1) return; 
-    let tempArr;
+    if(arr.length < 2) return arr; 
+    let tempArr, nuArr;
     tempArr = arr.slice();  
     
     console.log(tempArr);
     console.log(index);
-    while(tempArr.indexOf(OPS[index].operator) != -1 && index < OPS.length){
-      createAnswerArray(tempArr, OPS[index]);
-      console.log(createAnswerArray(tempArr, OPS[index]));
+    while(tempArr.indexOf(OPS[index].operator) != -1 && index < OPS.length-1){
+      nuArr = createAnswerArray(tempArr, OPS[index]);
       console.log(tempArr.indexOf(OPS[index].operator));
+      console.log(nuArr);
+      index++;
     }
-    index++;
+    console.log(nuArr);
     console.log(OPS[index]);
+    return findCalculation(nuArr, OPS, index);
     
-    let answer = tempArr[0];
-    console.log(answer);
+    // let answer = tempArr[0];
+    // console.log(answer);
  }
 
  const iterateOPS = () => {
@@ -130,7 +133,8 @@ const makeCalculation = (i, arr, op) => {
 
 // 
 const carveOutNewArr = (i, arr,answer) => {
-  console.log(i);
+  console.log(arr.splice(i-1,3, answer));
+  console.log(arr);
   return arr.splice(i-1,3, answer);
 }
 

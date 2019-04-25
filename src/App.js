@@ -25,6 +25,7 @@ class App extends Component {
     }
     if (input.type === 'equals'){
       console.warn('not yet');
+      
       /**
        * call calculations()
        * Calculations() will:
