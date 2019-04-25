@@ -20,7 +20,7 @@ class App extends Component {
 
 
   getInput = (input) => {
-    if(input.type === 'number'){
+    if(input.type === 'number' || input.type === 'zero'){
         this.setCalculation(input.display);
     }
     if (input.type === 'equals'){
@@ -57,10 +57,12 @@ class App extends Component {
   
   setCalculation = (input) => {
     let calc = this.state.calculation;
+    console.log('input for zero >> ', input);
+    
     if(calc[0] === '0') {
       calc[0] = input;
       this.setState({ calculation: calc});  
-    } else if (calc[this.state.calcIndex] == undefined){
+    } else if (calc[this.state.calcIndex] === undefined){
       calc.push(input);
       this.setState({ calculation: calc});  
     } else {
