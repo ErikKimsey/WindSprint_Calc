@@ -23,9 +23,9 @@ class App extends Component {
     if(input.type === 'number' || input.type === 'zero'){
         this.setCalculation(input.display);
     }
-    if (input.type === 'equals'){
+    if (input.display === '='){
       console.warn('not yet');
-      
+
       /**
        * call calculations()
        * Calculations() will:
@@ -33,7 +33,7 @@ class App extends Component {
        */
       return;
     }
-    if(input.type === 'operator'){
+    if(input.type === 'operator' && input.display != '='){
       this.incrCalcArr(input.display);
     }
     if(input.type === 'misc'){
